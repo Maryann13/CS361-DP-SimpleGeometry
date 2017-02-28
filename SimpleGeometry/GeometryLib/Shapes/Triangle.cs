@@ -29,9 +29,13 @@ namespace GeometryLib.Shapes
 
         public override string Print()
         {
+            return $"Triangle: sides: {Side1} {Side2} {Side3}, area = {Area()}";
+        }
+
+        public override double Area()
+        {
             var p = (Side1 + Side2 + Side3) / 2;
-            double area = Math.Sqrt(p * (p - Side1) * (p - Side2) * (p - Side3));
-            return $"Triangle: sides: {Side1} {Side2} {Side3}, area = {area}";
+            return Math.Sqrt(p * (p - Side1) * (p - Side2) * (p - Side3));
         }
     }
 }

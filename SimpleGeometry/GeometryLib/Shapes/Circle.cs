@@ -22,8 +22,12 @@ namespace GeometryLib.Shapes
 
         public override string Print()
         {
-            double area = Radius * Radius * Math.PI;
-            return $"Circle: radius = {Radius}, area = {area}";
+            return $"Circle: radius = {Radius}, area = {Area()}";
+        }
+
+        public override double Area()
+        {
+            return Radius * Radius * Math.PI;
         }
     }
 }
